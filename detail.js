@@ -49,7 +49,7 @@ const defaultProjects = [
     image: 'img/portfolio site main.png',
     tags: ['HTML', 'CSS'],
     github: '#',
-    deploy: '#',
+    deploy: 'https://portfolio-site-green-eta.vercel.app/main.html',
     detailLabel: 'PORTFOLIO WEBSITE',
     overview: '개인 소개와 프로젝트를 정리한 포트폴리오 사이트입니다.',
     purpose: '학습 내용과 프로젝트를 보기 쉽게 정리하기 위해 제작했습니다.',
@@ -76,6 +76,17 @@ try {
 } catch (error) {
   localStorage.removeItem('projects')
 }
+
+projects = projects.map(function (project) {
+  if (project.title === '포트폴리오 소개 웹사이트 제작' && (!project.deploy || project.deploy === '#')) {
+    return {
+      ...project,
+      deploy: 'https://portfolio-site-green-eta.vercel.app/main.html',
+    }
+  }
+
+  return project
+})
 
 const selectedIndex = localStorage.getItem('selectedProjectIndex')
 const project = projects[selectedIndex] || projects[0]

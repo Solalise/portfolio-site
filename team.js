@@ -7,11 +7,12 @@ const addTeamProjectBtn = document.querySelector('#addTeamProjectBtn')
 const defaultTeamProjects = [
   {
     required: true,
-    label: 'SECURITY GUIDE',
-    source: '웹프로그래밍 팀플',
-    title: '주요 사이버 보안 위협과 예방법 안내 웹사이트',
+    id: 'mid-security-guide',
+    label: 'MIDTERM SECURITY GUIDE',
+    source: '웹프로그래밍 중간 팀플',
+    title: 'Security Guide 보안 안내 웹사이트',
     desc:
-      '피싱, 랜섬웨어, 개인정보 유출 등 일상생활에서 접할 수 있는 보안 위협을 소개하고, 사용자가 실생활에서 적용할 수 있는 예방법을 쉽게 확인할 수 있도록 만든 보안 정보 안내 웹사이트입니다.',
+      '피싱, 랜섬웨어, 개인정보 유출 등 일상생활에서 접할 수 있는 보안 위협과 예방법을 소개한 중간 팀 프로젝트입니다.',
     image: 'img/teammain.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
     deploy: 'https://project-security-guide.vercel.app/',
@@ -19,35 +20,96 @@ const defaultTeamProjects = [
     goal:
       '사용자가 생활 속 사이버 보안 위협을 쉽게 이해하고, 피싱이나 개인정보 유출 같은 문제를 예방할 수 있도록 정보를 전달하는 것이 목표입니다.',
     content:
-      '메인 홈, 보안 이슈, OWASP Top 10, 보안 수칙, 팀 소개 페이지로 구성하여 정보 전달과 가독성을 높였습니다.',
+      '메인 홈, 보안 이슈, OWASP Top 10, 보안 수칙, 팀 소개 페이지로 구성하여 보안 정보를 카드와 리스트 중심으로 정리했습니다.',
     direction:
-      '리스트, 표, 카드형 레이아웃, 미디어 요소, 반응형 화면을 활용하여 HTML과 CSS 중심의 완성도 있는 웹사이트를 제작했습니다.',
+      'HTML과 CSS를 중심으로 페이지 구조, 카드형 레이아웃, 반응형 화면, 기본 페이지 연결을 구현했습니다.',
     members: [
       {
         name: '박형진',
         role: '팀장 / OWASP Top 10',
-        tasks: ['프로젝트 전체 설계 및 구현', 'OWASP TOP10 페이지 설계 및 구현', '최종 결과물 취합 및 배포'],
+        image: 'img/member-hyeongjin.jpg',
+        tasks: ['프로젝트 전체 설계 및 구현', 'OWASP Top 10 페이지 제작', '최종 결과물 취합 및 배포'],
         leader: true,
       },
       {
         name: '최보원',
         role: 'Main Page / UI Detail',
-        tasks: ['메인 홈 페이지 설계 및 구현', '팀 소개 페이지 설계 및 구현', '총괄 CSS 디자인 담당'],
+        image: 'img/member-bowon.png',
+        tasks: ['메인 홈 페이지 설계 및 구현', '팀 소개 페이지 설계 및 구현', '공통 CSS 디자인 담당'],
       },
       {
         name: '박시우',
         role: 'Security Guide / Contact',
+        image: 'img/member-siwoo.png',
         tasks: ['보안 수칙 페이지 제작', '자료 조사 및 정리', '문서 작성 및 발표'],
       },
       {
         name: '박지민',
         role: 'Security Issue Page',
+        image: 'img/member-jimin.jpg',
         tasks: ['보안 이슈 페이지 제작', '페이지 색상 디자인', '다크 모드 구현'],
       },
     ],
     review:
-      '각자 맡은 페이지를 중심으로 제작하고, 기본적인 HTML/CSS 구조와 자료 조사는 함께 진행했습니다. 이후 공통 디자인 기준을 맞추고, 페이지 간 연결과 반응형 화면을 점검하며 하나의 웹사이트로 통합했습니다.',
+      '중간 프로젝트에서는 보안 정보를 읽고 이해할 수 있는 안내형 웹사이트를 제작했습니다. 페이지별 자료를 정리하고, 카드형 UI와 공통 디자인을 맞춰 기본적인 보안 정보 전달에 집중했습니다.',
     gallery: ['img/teammain.png', 'img/rule.png', 'img/issue.png', 'img/owasp.png'],
+  },
+  {
+    required: true,
+    id: 'final-security-guide',
+    label: 'FINAL SECURITY GUIDE',
+    source: '웹프로그래밍 기말 팀플',
+    title: 'Security Guide 보안 학습 플랫폼',
+    desc:
+      '중간 프로젝트의 보안 안내 웹사이트를 확장하여 보안 이슈 뉴스, OWASP 취약점 실습, 실생활 보안 위험 진단, 보안 퀴즈와 보안 습관 체크리스트를 추가한 기말 팀 프로젝트입니다.',
+    image: 'img/teammain.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    deploy: 'https://web-programming-team-project-alpha.vercel.app/index.html',
+    github: 'https://github.com/Solalise',
+    goal:
+      '중간 프로젝트의 안내형 사이트를 사용자가 직접 테스트하고 결과를 확인할 수 있는 인터랙티브 보안 학습 플랫폼으로 업그레이드하는 것이 목표입니다.',
+    content:
+      '보안 뉴스 자동 반영, OWASP 취약점 실습, 비밀번호·피싱 메일·URL 위험 진단, 보안 퀴즈, 개인 보안 습관 체크리스트, 팀 소개와 문의 기능을 추가했습니다.',
+    direction:
+      'JavaScript를 활용해 입력값 분석, 버튼 클릭 이벤트, 체크리스트 점수 계산, 뉴스/영상 필터링, 상세 정보 표시처럼 사용자가 직접 반응을 확인하는 기능을 구현했습니다.',
+    members: [
+      {
+        name: '박형진',
+        role: '팀장 / 인터랙티브 보안 실습',
+        image: 'img/member-hyeongjin.jpg',
+        tasks: ['취약 코드와 보안 조치 코드 비교 구현', 'OWASP A05 XSS 및 A01 접근 통제 실습 구현', 'OWASP A07 무차별 대입 실습 구현'],
+        leader: true,
+      },
+      {
+        name: '박시우',
+        role: '보안 수칙 / 보안 퀴즈',
+        image: 'img/member-siwoo.png',
+        tasks: ['보안 수칙 카드 인터랙션 기능 구현', '카드 클릭 시 추가 정보 표시 기능 개발', '보안 퀴즈 정답 확인 및 결과 출력 구현'],
+      },
+      {
+        name: '박지민',
+        role: '보안 이슈 / 트렌드',
+        image: 'img/member-jimin.jpg',
+        tasks: ['보안 기사 실시간 반영 및 필터 구현', '보안 트렌드 영상 실시간 반영 및 필터 구현', '더보기 버튼 클릭 시 추가 정보 표시 구현'],
+      },
+      {
+        name: '최보원',
+        role: '위험 진단 / 담당 페이지 JS',
+        image: 'img/member-bowon.png',
+        tasks: ['위험 진단 페이지 설계 및 구현', '팀 소개 및 문의 페이지 JS 추가와 내용 변경', '메인 홈페이지 수정 및 JS 추가'],
+      },
+    ],
+    review:
+      '기말 프로젝트에서는 JavaScript로 기능을 확장했습니다. 보안 이슈 페이지에는 기사 필터와 더보기 기능, 최신 보안 트렌드 영상 영역을 추가했고, 보안 실습 페이지에는 취약한 코드와 안전한 코드를 비교하는 OWASP 실습 탭을 구현했습니다. 위험 진단 페이지에서는 비밀번호·피싱 메일·URL 입력값을 분석해 위험 신호와 이유를 출력하도록 만들었고, 보안 퀴즈와 개인 보안 습관 체크리스트에서는 정답 확인, 결과 출력, 체크율 계산 기능을 추가했습니다.',
+    gallery: [
+      'img/security-final-practice.png',
+      'img/security-final-news.png',
+      'img/security-final-issues.png',
+      'img/security-final-risk.png',
+      'img/security-final-diagnosis.png',
+      'img/security-final-quiz.png',
+      'img/security-final-checklist.png',
+    ],
   },
 ]
 
@@ -56,11 +118,9 @@ let selectedTeamIndex = null
 
 function loadTeamProjects() {
   try {
-    const hideDefaultProject = localStorage.getItem('hideDefaultTeamProject') === 'true'
     const savedProjects = JSON.parse(localStorage.getItem('teamProjects')) || []
-    const baseProjects = hideDefaultProject ? [] : defaultTeamProjects
 
-    return baseProjects.concat(savedProjects).map(function (project) {
+    return defaultTeamProjects.concat(savedProjects).map(function (project) {
       return {
         ...project,
         source: project.source || (project.required ? '웹프로그래밍 팀플' : '팀 프로젝트'),
@@ -102,9 +162,15 @@ function renderTeamCards() {
   teamProjects.forEach(function (project, index) {
     const card = document.createElement('article')
     card.className = 'team-project-card'
+    if (project.required) {
+      card.id = project.id || `team-project-${index}`
+    }
     const safeTags = (project.tags || [])
       .map((tag) => `<span>${escapeHTML(tag)}</span>`)
       .join('')
+    const deleteButton = project.required
+      ? ''
+      : `<button class="project-btn sub" type="button" data-action="delete" data-index="${index}">삭제</button>`
 
     card.innerHTML = `
       <img src="${project.image}" alt="${escapeHTML(project.title)}" class="team-project-thumb">
@@ -122,7 +188,7 @@ function renderTeamCards() {
           <button class="project-btn detail" type="button" data-action="detail" data-index="${index}">
             상세 보기
           </button>
-          <button class="project-btn sub" type="button" data-action="delete" data-index="${index}">삭제</button>
+          ${deleteButton}
         </div>
       </div>
     `
@@ -188,6 +254,7 @@ function makeTeamCardDetail(project) {
           .map(
             (member) => `
               <article class="team-card-member ${member.leader ? 'leader' : ''}">
+                ${member.image ? `<img src="${escapeHTML(member.image)}" alt="${escapeHTML(member.name)} 프로필 이미지" class="member-avatar">` : ''}
                 <strong>${member.leader ? '👑 ' : ''}${escapeHTML(member.name)}</strong>
                 <p>${escapeHTML(member.role)}</p>
                 <ul>
@@ -200,7 +267,7 @@ function makeTeamCardDetail(project) {
       </div>
 
       <div class="team-card-review">
-        <h3>협업 방식</h3>
+        <h3>추가된 기능</h3>
         <p>${escapeHTML(project.review)}</p>
       </div>
 
@@ -251,7 +318,15 @@ function renderMembers(members) {
     const card = document.createElement('article')
     card.className = member.leader ? 'member-card leader' : 'member-card'
     card.innerHTML = `
-      <div class="member-icon">${member.leader ? '👑' : '👤'}</div>
+      <div class="member-icon">
+        ${
+          member.image
+            ? `<img src="${escapeHTML(member.image)}" alt="${escapeHTML(member.name)} 프로필 이미지">`
+            : member.leader
+              ? '👑'
+              : '👤'
+        }
+      </div>
       <h3>${escapeHTML(member.name)}</h3>
       <p class="member-role">${escapeHTML(member.role)}</p>
       <ul>
@@ -394,10 +469,6 @@ teamProjectGrid.addEventListener('click', function (event) {
   if (button.dataset.action === 'delete') {
     if (!confirm('이 팀 프로젝트를 삭제할까요?')) {
       return
-    }
-
-    if (teamProjects[index].required) {
-      localStorage.setItem('hideDefaultTeamProject', 'true')
     }
 
     teamProjects.splice(index, 1)

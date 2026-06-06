@@ -1,45 +1,57 @@
 const fallbackTeamProject = {
-  label: 'SECURITY GUIDE',
-  source: '웹프로그래밍 팀플',
-  title: '주요 사이버 보안 위협과 예방법 안내 웹사이트',
+  label: 'FINAL SECURITY GUIDE',
+  source: '웹프로그래밍 기말 팀플',
+  title: 'Security Guide 보안 학습 플랫폼',
   desc:
-    '일상생활에서 접할 수 있는 보안 위협을 소개하고, 사용자가 쉽게 확인할 수 있는 예방법을 정리한 보안 정보 안내 웹사이트입니다.',
+    '중간 프로젝트의 보안 안내 웹사이트를 확장하여 보안 이슈 뉴스, OWASP 취약점 실습, 실생활 보안 위험 진단, 보안 퀴즈와 보안 습관 체크리스트를 추가한 기말 팀 프로젝트입니다.',
   image: 'img/teammain.png',
   tags: ['HTML', 'CSS', 'JavaScript'],
-  deploy: 'https://project-security-guide.vercel.app/',
+  deploy: 'https://web-programming-team-project-alpha.vercel.app/index.html',
   github: 'https://github.com/Solalise',
   goal:
-    '사용자가 생활 속 사이버 보안 위협을 쉽게 이해하고, 피싱이나 개인정보 유출 같은 문제를 예방할 수 있도록 정보를 전달하는 것이 목표입니다.',
+    '중간 프로젝트의 안내형 사이트를 사용자가 직접 테스트하고 결과를 확인할 수 있는 인터랙티브 보안 학습 플랫폼으로 업그레이드하는 것이 목표입니다.',
   content:
-    '메인, 보안 이슈, OWASP Top 10, 보안 수칙, 팀 소개 페이지로 구성하여 정보 전달과 가독성을 높였습니다.',
+    '보안 뉴스 자동 반영, OWASP 취약점 실습, 비밀번호·피싱 메일·URL 위험 진단, 보안 퀴즈, 개인 보안 습관 체크리스트, 팀 소개와 문의 기능을 추가했습니다.',
   direction:
-    '카드형 레이아웃, 이미지 요소, 반응형 화면을 활용해 HTML과 CSS 중심의 완성도 있는 사이트를 제작했습니다.',
+    'JavaScript를 활용해 입력값 분석, 버튼 클릭 이벤트, 체크리스트 점수 계산, 뉴스/영상 필터링, 상세 정보 표시처럼 사용자가 직접 반응을 확인하는 기능을 구현했습니다.',
   members: [
     {
       name: '박형진',
-      role: '팀장 / OWASP Top 10',
-      tasks: ['프로젝트 전체 설계 및 구현', 'OWASP Top 10 페이지 제작', '최종 결과물 취합 및 배포'],
+      role: '팀장 / 인터랙티브 보안 실습',
+      image: 'img/member-hyeongjin.jpg',
+      tasks: ['취약 코드와 보안 조치 코드 비교 구현', 'OWASP A05 XSS 및 A01 접근 통제 실습 구현', 'OWASP A07 무차별 대입 실습 구현'],
       leader: true,
     },
     {
-      name: '최보원',
-      role: 'Main Page / UI Detail',
-      tasks: ['메인 페이지 제작', '팀 소개 페이지 제작', '공통 CSS 디자인 담당'],
-    },
-    {
-      name: '박시현',
-      role: 'Security Guide / Contact',
-      tasks: ['보안 수칙 페이지 제작', '자료 조사 및 정리', '문서 작성 및 발표'],
+      name: '박시우',
+      role: '보안 수칙 / 보안 퀴즈',
+      image: 'img/member-siwoo.png',
+      tasks: ['보안 수칙 카드 인터랙션 기능 구현', '카드 클릭 시 추가 정보 표시 기능 개발', '보안 퀴즈 정답 확인 및 결과 출력 구현'],
     },
     {
       name: '박지민',
-      role: 'Security Issue Page',
-      tasks: ['보안 이슈 페이지 제작', '페이지 색상 디자인', '다크 모드 구현'],
+      role: '보안 이슈 / 트렌드',
+      image: 'img/member-jimin.jpg',
+      tasks: ['보안 기사 실시간 반영 및 필터 구현', '보안 트렌드 영상 실시간 반영 및 필터 구현', '더보기 버튼 클릭 시 추가 정보 표시 구현'],
+    },
+    {
+      name: '최보원',
+      role: '위험 진단 / 담당 페이지 JS',
+      image: 'img/member-bowon.png',
+      tasks: ['위험 진단 페이지 설계 및 구현', '팀 소개 및 문의 페이지 JS 추가와 내용 변경', '메인 홈페이지 수정 및 JS 추가'],
     },
   ],
   review:
-    '각자 맡은 페이지를 중심으로 제작하고, 이후 공통 디자인 기준을 맞추며 하나의 사이트로 통합했습니다.',
-  gallery: ['img/teammain.png', 'img/rule.png', 'img/issue.png', 'img/owasp.png'],
+    '기말 프로젝트에서는 JavaScript로 기능을 확장했습니다. 보안 이슈 페이지에는 기사 필터와 더보기 기능, 최신 보안 트렌드 영상 영역을 추가했고, 보안 실습 페이지에는 취약한 코드와 안전한 코드를 비교하는 OWASP 실습 탭을 구현했습니다. 위험 진단 페이지에서는 비밀번호·피싱 메일·URL 입력값을 분석해 위험 신호와 이유를 출력하도록 만들었고, 보안 퀴즈와 개인 보안 습관 체크리스트에서는 정답 확인, 결과 출력, 체크율 계산 기능을 추가했습니다.',
+  gallery: [
+    'img/security-final-practice.png',
+    'img/security-final-news.png',
+    'img/security-final-issues.png',
+    'img/security-final-risk.png',
+    'img/security-final-diagnosis.png',
+    'img/security-final-quiz.png',
+    'img/security-final-checklist.png',
+  ],
 }
 
 let teamProject = fallbackTeamProject
@@ -114,6 +126,7 @@ function renderMembers() {
     const card = document.createElement('article')
     card.className = member.leader ? 'team-card-member leader' : 'team-card-member'
     card.innerHTML = `
+      ${member.image ? `<img src="${escapeHTML(member.image)}" alt="${escapeHTML(member.name || '팀원')} 프로필 이미지" class="member-avatar">` : ''}
       <strong>${member.leader ? '팀장 ' : ''}${escapeHTML(member.name || '팀원')}</strong>
       <p>${escapeHTML(member.role || '역할 정리 예정')}</p>
       <ul>
