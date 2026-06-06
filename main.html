@@ -26,6 +26,8 @@
               <li><a href="about.html">About</a></li>
               <li><a href="project.html">Project</a></li>
               <li><a href="team.html">Team</a></li>
+              <li><a href="recommend.html">Recommend</a></li>
+              <li><a href="study.html">Study</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
@@ -107,25 +109,55 @@
     <!-- =========================
       활동 요약 (숫자)
   ========================== -->
-    <section class="stats container">
+    <section class="stats container" id="stats">
       <div class="stat-box">
-        <strong>5회</strong>
+        <strong data-stat-value="personalProjects">5회</strong>
         <span>개인 프로젝트</span>
       </div>
 
       <div class="stat-box">
-        <strong>1회</strong>
+        <strong data-stat-value="teamProjects">1회</strong>
         <span>팀 프로젝트</span>
       </div>
 
       <div class="stat-box">
-        <strong>2개</strong>
+        <strong data-stat-value="certificates">2개</strong>
         <span>보유 중인 자격증</span>
       </div>
 
       <div class="stat-box">
-        <strong>멋사</strong>
+        <strong data-stat-value="clubActivity">멋사</strong>
         <span>동아리 활동</span>
+      </div>
+    </section>
+
+    <section class="stats-editor container">
+      <button id="toggleStatsEditor" class="stats-edit-btn" type="button">
+        활동 요약 수정
+      </button>
+
+      <div id="statsEditorPanel" class="stats-editor-panel">
+        <label>
+          개인 프로젝트
+          <input type="text" data-stat-input="personalProjects" placeholder="예: 5회" />
+        </label>
+
+        <label>
+          팀 프로젝트
+          <input type="text" data-stat-input="teamProjects" placeholder="예: 1회" />
+        </label>
+
+        <label>
+          보유 중인 자격증
+          <input type="text" data-stat-input="certificates" placeholder="예: 2개" />
+        </label>
+
+        <label>
+          동아리 활동
+          <input type="text" data-stat-input="clubActivity" placeholder="예: 멋사" />
+        </label>
+
+        <button id="resetStats" class="stats-reset-btn" type="button">기본값으로</button>
       </div>
     </section>
 
@@ -141,10 +173,6 @@
 
       <div class="recent-table-wrap">
         <table class="recent-table">
-          <caption>
-            최근 프로젝트 및 팀 활동 업데이트 예정 목록
-          </caption>
-
           <thead>
             <tr>
               <th>구분</th>
@@ -154,7 +182,7 @@
             </tr>
           </thead>
 
-          <tbody>
+          <tbody id="recentActivityBody">
             <tr>
               <td>Project</td>
               <td>AI 공부 관리 웹서비스</td>
@@ -184,6 +212,10 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="recent-more-area">
+          <button id="recentMoreBtn" class="recent-more-btn" type="button">더보기</button>
+        </div>
       </div>
     </section>
     <!-- =========================
@@ -224,6 +256,8 @@
           <a href="about.html">About</a>
           <a href="project.html">Project</a>
           <a href="team.html">Team</a>
+          <a href="recommend.html">Recommend</a>
+          <a href="study.html">Study</a>
           <a href="contact.html">Contact</a>
         </div>
 
@@ -234,5 +268,7 @@
         <p class="footer-copy">© 2026 Bowon Portfolio. All rights reserved.</p>
       </div>
     </footer>
+    <script src="theme.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

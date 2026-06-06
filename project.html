@@ -8,9 +8,6 @@
   </head>
 
   <body>
-    <!-- =========================
-      헤더 / 네비게이션
-    ========================== -->
     <header>
       <div class="container nav">
         <div class="logo">
@@ -24,43 +21,31 @@
               <li><a href="about.html">About</a></li>
               <li><a href="project.html" class="active">Project</a></li>
               <li><a href="team.html">Team</a></li>
+              <li><a href="recommend.html">Recommend</a></li>
+              <li><a href="study.html">Study</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
 
           <div class="nav-links">
-            <a
-              href="https://github.com/Solalise"
-              target="_blank"
-              class="nav-btn"
-              >GitHub</a
-            >
-            <a
-              href="https://choebowon0.tistory.com/"
-              target="_blank"
-              class="nav-btn"
-              >Blog</a
-            >
+            <a href="https://github.com/Solalise" target="_blank" class="nav-btn">GitHub</a>
+            <a href="https://choebowon0.tistory.com/" target="_blank" class="nav-btn">Blog</a>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- =========================
-      프로젝트 페이지 상단
-    ========================== -->
     <section class="project-page">
       <div class="container">
         <div class="project-top">
-          <p class="contact-path"><span class="home">Home</span> > Projects</p>
+          <p class="contact-path"><span class="home">Home</span> &gt; Projects</p>
           <h1>Projects</h1>
           <p>
             지금까지 진행한 프로젝트와 학습 활동을 정리한 공간입니다.<br />
-            각 프로젝트의 주제와 사용 기술을 한눈에 볼 수 있도록 구성하였습니다.
+            각 프로젝트의 주제와 사용 기술을 한눈에 볼 수 있도록 구성했습니다.
           </p>
         </div>
 
-        <!-- 필터 형태 모형 코드 -->
         <div class="project-filter">
           <button class="filter-btn active" type="button">전체</button>
           <button class="filter-btn" type="button">Web</button>
@@ -69,210 +54,61 @@
           <button class="filter-btn" type="button">etc</button>
         </div>
 
-        <!-- 프로젝트 카드 영역 -->
-        <div class="project-grid">
-          <!-- 프로젝트 1 -->
-          <div class="project-card-box">
-            <img
-              src="img/hcjmain.png"
-              alt="개인 포트폴리오 웹사이트"
-              class="project-thumb"
-            />
-            <div class="project-content">
-              <span class="project-category">Web</span>
-              <h3>실습용 웹사이트 제작</h3>
-              <p>
-                HTML, CSS, JavaScript를 사용해서 기초적인 기능을 활용해 처음
-                만든 웹사이트입니다.
-              </p>
-
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-
-              <div class="project-btns">
-                <a href="project-detail1.html" class="project-btn detail"
-                  >자세히 보기</a
-                >
-                <a
-                  href="https://github.com/Solalise/portfolio"
-                  target="_blank"
-                  class="project-btn sub"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- 프로젝트 2 -->
-          <div class="project-card-box">
-            <img
-              src="img/portfolio site main.png"
-              alt="포트폴리오 소개 사이트"
-              class="project-thumb"
-            />
-            <div class="project-content">
-              <span class="project-category">Web</span>
-              <h3>포트폴리오 소개 웹사이트 제작</h3>
-              <p>저의 포트폴리오를 소개하기 위해 만든 웹사이트입니다.</p>
-
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-              </div>
-
-              <div class="project-btns">
-                <a href="project-detail2.html" class="project-btn detail"
-                  >자세히 보기</a
-                >
-                <a
-                  href="https://github.com/Solalise/security-project"
-                  target="_blank"
-                  class="project-btn sub"
-                  >GitHub</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- 프로젝트 3 -->
-          <div class="project-card-box">
-            <img
-              src="img/platform.png"
-              alt="웹 취약점 분석 플랫폼 제작"
-              class="project-thumb"
-            />
-            <div class="project-content">
-              <span class="project-category">Security</span>
-              <h3>웹 취약점 분석 플랫폼(진행중)</h3>
-              <p>
-                웹 취약점을 직접 실습하고, 공결 결과를 분석하여 원인과 해결
-                방법까지 제공하는 학습 플랫폼
-              </p>
-
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>MySQL</span>
-              </div>
-              <div class="project-btns">
-                <a href="#" class="project-btn detail">진행 중</a>
-                <a href="#" class="project-btn sub">예정</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 프로젝트 4 -->
-          <div class="project-card-box">
-            <img
-              src="img/studyproject.png"
-              alt="AI 기반 공부 관리 웹 서비스"
-              class="project-thumb"
-            />
-            <div class="project-content">
-              <span class="project-category">AI</span>
-              <h3>AI 기반 공부 관리 웹 서비스</h3>
-              <p>
-                사용자의 학습 시간과 과목별 공부 기록을 분석하여 효율적인 공부
-                계획을 추천해주는 웹 서비스입니다. 앞으로 AI 기능을 활용해 개인
-                맞춤형 학습 루틴을 제안하는 프로젝트로 발전시킬 예정입니다.
-              </p>
-
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>MySQL</span>
-                <span>AI</span>
-              </div>
-
-              <div class="project-btns">
-                <a href="#" class="project-btn detail">구상 중</a>
-                <a href="#" class="project-btn sub">예정</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 프로젝트 5 -->
-          <div class="project-card-box">
-            <img
-              src="img/fishing.png"
-              alt="피싱 사이트 탐지 시뮬레이터"
-              class="project-thumb"
-            />
-            <div class="project-content">
-              <span class="project-category">Security</span>
-              <h3>피싱 사이트 탐지 시뮬레이터</h3>
-              <p>
-                사용자가 입력한 URL의 구조, 도메인 형태, 의심 키워드 등을
-                분석하여 피싱 사이트 위험도를 판단하는 보안 시뮬레이터입니다.
-                추후에는 AI 분석 기능을 추가하여 더 정확한 탐지 결과를 제공하는
-                것을 목표로 합니다.
-              </p>
-
-              <div class="project-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>AI</span>
-              </div>
-
-              <div class="project-btns">
-                <a href="#" class="project-btn detail">구상 중</a>
-                <a href="#" class="project-btn sub">예정</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 프로젝트 6 -->
-          <div class="project-card-box">
-            <img
-              src="img/commingsoon.png"
-              alt="추가 예정 프로젝트"
-              class="project-thumb"
-            />
-            <div class="project-content">
-              <span class="project-category">COMING SOON</span>
-              <h3>추가 예정 프로젝트</h3>
-              <p>
-                앞으로 진행할 프로젝트를 계속 추가하여 포트폴리오를 확장할 수
-                있도록 구성해둔 영역입니다.
-              </p>
-
-              <div class="project-tags">
-                <span>New</span>
-                <span>Planning</span>
-              </div>
-
-              <div class="project-btns">
-                <a href="#" class="project-btn detail">앞으로</a>
-                <a href="#" class="project-btn sub">추가 예정</a>
-              </div>
-            </div>
-          </div>
+        <div class="project-search-box">
+          <input type="text" id="searchInput" placeholder="프로젝트 검색" />
         </div>
 
-        <!-- 안내 박스 -->
-        <div class="project-more-box">
-          <h3><span class="purple">Coming</span> Soon</h3>
-          <p>
-            다 적기에는 그냥 내용 반복이라 의미가 없다고 생각하여 <br />
-            몇개의 대표적인 프로젝트에 관한 내용만 적어봤습니다. 추후에 더
-            추가해 볼 생각입니다!
-          </p>
+        <div class="project-grid" id="projectGrid"></div>
+
+        <div class="add-project-area">
+          <button id="openAddModal" class="add-project-btn" type="button">+</button>
+          <p>프로젝트 추가하기</p>
+        </div>
+
+        <div id="projectModal" class="project-modal">
+          <div class="project-modal-box">
+            <button id="closeAddModal" class="modal-close" type="button">x</button>
+            <h2>프로젝트 추가</h2>
+
+            <input type="text" id="title" placeholder="프로젝트 제목" />
+            <input type="text" id="category" placeholder="카테고리 예: Web, AI, Security, etc" />
+            <select id="status">
+              <option value="설계중">설계중</option>
+              <option value="진행중">진행중</option>
+              <option value="완료">완료</option>
+            </select>
+            <input type="text" id="tags" placeholder="사용 기술 예: HTML, CSS, JavaScript" />
+            <input type="url" id="deploy" placeholder="배포 사이트 URL 예: https://example.com" />
+
+            <label class="image-label">
+              대표 이미지 추가하기
+              <input type="file" id="imageFile" accept="image/*" />
+            </label>
+
+            <textarea id="desc" placeholder="프로젝트 카드 설명"></textarea>
+
+            <input type="text" id="detailLabel" placeholder="상세 라벨 예: WEB PROJECT" />
+            <textarea id="overview" placeholder="프로젝트 개요"></textarea>
+            <textarea id="purpose" placeholder="제작 목적"></textarea>
+            <textarea id="pages" placeholder="페이지 구성, 쉼표로 구분"></textarea>
+            <textarea id="features" placeholder="주요 기능, 쉼표로 구분"></textarea>
+            <textarea
+              id="previewItems"
+              placeholder="화면 미리보기: 제목 | 이미지경로 또는 이미지URL | 설명&#10;예) Main Page | img/main.png | 메인 화면 설명&#10;여러 개는 줄바꿈으로 추가"
+            ></textarea>
+            <textarea id="role" placeholder="내가 맡은 역할"></textarea>
+            <textarea id="difficulty" placeholder="어려웠던 점"></textarea>
+            <textarea id="solution" placeholder="해결 방법"></textarea>
+            <textarea id="learned" placeholder="배운 점"></textarea>
+
+            <button id="addProjectBtn" class="modal-add-btn" type="button">
+              프로젝트 추가
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================
-      푸터
-    ========================== -->
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-logo">My Portfolio</div>
@@ -282,6 +118,8 @@
           <a href="about.html">About</a>
           <a href="project.html">Project</a>
           <a href="team.html">Team</a>
+          <a href="recommend.html">Recommend</a>
+          <a href="study.html">Study</a>
           <a href="contact.html">Contact</a>
         </div>
 
@@ -292,5 +130,8 @@
         <p class="footer-copy">© 2026 Bowon Portfolio. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="theme.js"></script>
+    <script src="project.js"></script>
   </body>
 </html>

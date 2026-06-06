@@ -22,6 +22,8 @@
               <li><a href="about.html">About</a></li>
               <li><a href="project.html">Project</a></li>
               <li><a href="team.html">Team</a></li>
+              <li><a href="recommend.html">Recommend</a></li>
+              <li><a href="study.html">Study</a></li>
               <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
           </nav>
@@ -52,7 +54,7 @@
           <h1>Contact</h1>
           <p class="contact-intro">
             포트폴리오를 봐주셔서 감사합니다.<br />
-            아래에서 기본 정보와 문의 페이지를 확인하실 수 있습니다.
+            아래에서 기본 정보와 문의 양식을 바로 확인하실 수 있습니다.
           </p>
         </div>
 
@@ -82,13 +84,14 @@
               <div class="contact-info-item">
                 <p>
                   <strong>안내</strong><br />
-                  문의하기 버튼을 누르면 메시지를 작성할 수 있는 페이지로
-                  이동합니다.
+                  문의하기 버튼을 누르면 메시지를 작성할 수 있는 창이 열립니다.
                 </p>
               </div>
             </div>
             <br />
-            <a href="inquiry.html" class="btn primary contact-btn">문의하기</a>
+            <button id="openContactModal" class="btn primary contact-btn" type="button">
+              문의하기
+            </button>
           </div>
 
           <div class="contact-right">
@@ -140,6 +143,55 @@
             </ul>
           </div>
         </div>
+
+        <div id="contactModal" class="contact-modal">
+          <div class="contact-modal-box">
+            <button id="closeContactModal" class="modal-close" type="button">x</button>
+            <h2>문의하기</h2>
+            <p class="form-guide">
+              이름, 이메일, 제목, 문의 내용을 입력한 뒤 제출 버튼을 눌러주세요.
+            </p>
+
+            <form class="inquiry-form" id="contactForm">
+              <label for="name">이름</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="이름을 입력하세요"
+              />
+
+              <label for="email">이메일</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="이메일을 입력하세요"
+              />
+
+              <label for="title">제목</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="제목을 입력하세요"
+              />
+
+              <label for="message">문의 내용</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="문의 내용을 입력하세요"
+              ></textarea>
+
+              <p class="contact-form-message" id="contactFormMessage"></p>
+
+              <div class="form-btn-group">
+                <button type="submit" class="btn primary">제출</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -153,6 +205,8 @@
           <a href="about.html">About</a>
           <a href="project.html">Project</a>
           <a href="team.html">Team</a>
+          <a href="recommend.html">Recommend</a>
+          <a href="study.html">Study</a>
           <a href="contact.html">Contact</a>
         </div>
 
@@ -163,5 +217,7 @@
         <p class="footer-copy">© 2026 Bowon Portfolio. All rights reserved.</p>
       </div>
     </footer>
+    <script src="theme.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>

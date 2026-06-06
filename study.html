@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Log | My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="logo">
+          <span class="black">My</span> <span class="purple">Portfolio</span>
+        </div>
+
+        <div class="menu-wrap">
+          <nav>
+            <ul class="menu">
+              <li><a href="main.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="project.html">Project</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="recommend.html">Recommend</a></li>
+              <li><a href="study.html" class="active">Study</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="nav-links">
+            <a href="https://github.com/Solalise" target="_blank" class="nav-btn">GitHub</a>
+            <a href="https://choebowon0.tistory.com/" target="_blank" class="nav-btn">Blog</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="study-page">
+      <section class="container">
+        <div class="study-top">
+          <p class="contact-path"><span class="home">Home</span> &gt; Study Log</p>
+          <h1>Security Study Log</h1>
+          <p>
+            Bandit, Dreamhack, Linux, SQLD처럼 큰 학습 목록을 만들고, 각 목록 안에 풀이와 이론 정리를 기록합니다.
+          </p>
+        </div>
+
+        <section class="study-summary-grid compact" id="studySummary"></section>
+
+        <section id="studyListView">
+          <div class="study-toolbar">
+            <div class="study-filter" id="studyFilter">
+              <button class="study-filter-btn active" type="button" data-category="all">전체</button>
+              <button class="study-filter-btn" type="button" data-category="wargame">문제 풀이</button>
+              <button class="study-filter-btn" type="button" data-category="certificate">자격증</button>
+              <button class="study-filter-btn" type="button" data-category="language">언어/OS</button>
+            </div>
+            <button id="toggleTopicForm" class="btn primary study-add-main" type="button">
+              학습 목록 추가
+            </button>
+          </div>
+
+          <form id="topicForm" class="study-topic-form">
+            <div class="study-form-grid topic">
+              <label>
+                목록 이름
+                <input id="topicTitle" type="text" placeholder="예: OverTheWire Bandit" />
+              </label>
+              <label>
+                분류
+                <select id="topicCategory">
+                  <option value="wargame">문제 풀이</option>
+                  <option value="certificate">자격증</option>
+                  <option value="language">언어/OS</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              설명
+              <textarea id="topicDesc" placeholder="이 목록에서 어떤 내용을 기록할지 적어두세요."></textarea>
+            </label>
+            <button class="btn primary" type="submit">목록 저장</button>
+          </form>
+
+          <section class="study-grid" id="studyGrid"></section>
+        </section>
+
+        <section id="studyDetailView" class="study-detail-view"></section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-logo">My Portfolio</div>
+
+        <div class="footer-links">
+          <a href="main.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="project.html">Project</a>
+          <a href="team.html">Team</a>
+          <a href="recommend.html">Recommend</a>
+          <a href="study.html">Study</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <p class="footer-info">개인 포트폴리오 웹사이트 | HTML · CSS · JavaScript</p>
+        <p class="footer-copy">2026 Bowon Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="study.js"></script>
+  </body>
+</html>

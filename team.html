@@ -21,6 +21,8 @@
               <li><a href="about.html">About</a></li>
               <li><a href="project.html">Project</a></li>
               <li><a href="team.html" class="active">Team</a></li>
+              <li><a href="recommend.html">Recommend</a></li>
+              <li><a href="study.html">Study</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
@@ -53,6 +55,13 @@
             주요 사이버 보안 위협과 예방법 안내 웹사이트 제작 과정을
             정리했습니다.
           </p>
+        </div>
+
+        <div class="team-project-grid" id="teamProjectGrid"></div>
+
+        <div class="add-project-area">
+          <button id="openTeamModal" class="add-project-btn" type="button">+</button>
+          <p>팀 프로젝트 추가하기</p>
         </div>
 
         <div class="team-hero">
@@ -189,6 +198,37 @@
             연결과 반응형 화면을 점검하며 하나의 웹사이트로 통합했습니다.
           </p>
         </div>
+
+        <div id="teamModal" class="project-modal">
+          <div class="project-modal-box">
+            <button id="closeTeamModal" class="modal-close" type="button">x</button>
+            <h2>팀 프로젝트 추가</h2>
+
+            <input type="text" id="teamTitle" placeholder="팀 프로젝트 제목" />
+            <input type="text" id="teamLabel" placeholder="라벨 예: SECURITY GUIDE" />
+            <input type="text" id="teamSource" placeholder="어디서 한 팀플인지 예: 멋사, CCIT, 졸업작품, 웹프로그래밍 팀플" />
+            <input type="text" id="teamTags" placeholder="사용 기술 예: HTML, CSS, JavaScript" />
+            <input type="url" id="teamDeploy" placeholder="배포 사이트 URL" />
+            <input type="url" id="teamGithub" placeholder="GitHub URL" />
+
+            <label class="image-label">
+              대표 이미지 추가하기
+              <input type="file" id="teamImageFile" accept="image/*" />
+            </label>
+
+            <textarea id="teamDesc" placeholder="프로젝트 소개"></textarea>
+            <textarea id="teamGoal" placeholder="프로젝트 목표"></textarea>
+            <textarea id="teamContent" placeholder="주요 콘텐츠"></textarea>
+            <textarea id="teamDirection" placeholder="제작 방향"></textarea>
+            <textarea id="teamMembers" placeholder="팀원 역할: 이름 | 역할 | 작업1, 작업2&#10;예) 최보원 | Main Page | 메인 홈 제작, CSS 담당"></textarea>
+            <textarea id="teamReview" placeholder="협업 방식"></textarea>
+            <textarea id="teamGallery" placeholder="작업 과정 이미지 경로, 쉼표로 구분"></textarea>
+
+            <button id="addTeamProjectBtn" class="modal-add-btn" type="button">
+              팀 프로젝트 추가
+            </button>
+          </div>
+        </div>
       </div>
     </section>
     <section class="team-gallery">
@@ -211,6 +251,8 @@
           <a href="about.html">About</a>
           <a href="project.html">Project</a>
           <a href="team.html">Team</a>
+          <a href="recommend.html">Recommend</a>
+          <a href="study.html">Study</a>
           <a href="contact.html">Contact</a>
         </div>
 
@@ -221,5 +263,7 @@
         <p class="footer-copy">© 2026 Bowon Portfolio. All rights reserved.</p>
       </div>
     </footer>
+    <script src="theme.js"></script>
+    <script src="team.js"></script>
   </body>
 </html>

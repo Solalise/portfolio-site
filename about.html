@@ -21,6 +21,8 @@
               <li><a href="about.html">About</a></li>
               <li><a href="project.html">Project</a></li>
               <li><a href="team.html">Team</a></li>
+              <li><a href="recommend.html">Recommend</a></li>
+              <li><a href="study.html">Study</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
@@ -52,7 +54,7 @@
 
         <section class="about-profile">
           <div class="profile-img-box">
-            <img src="img/about.me.jpg" alt="프로필 이미지" />
+            <img id="profileImage" src="img/about.me.jpg" alt="프로필 이미지" />
           </div>
 
           <div class="profile-info-box">
@@ -61,29 +63,43 @@
             <dl class="profile-info-list">
               <div>
                 <dt>이름</dt>
-                <dd>최보원</dd>
+                <dd data-profile-value="name">최보원</dd>
               </div>
 
               <div>
                 <dt>생년월일</dt>
-                <dd>2004.00.00</dd>
+                <dd data-profile-value="birth">2004.00.00</dd>
               </div>
 
               <div>
                 <dt>학교/전공</dt>
-                <dd>중부대학교 / 정보보호학과</dd>
+                <dd data-profile-value="school">중부대학교 / 정보보호학과</dd>
               </div>
 
               <div>
                 <dt>동아리 활동</dt>
-                <dd>멋쟁이 사자처럼 14기</dd>
+                <dd data-profile-value="club">멋쟁이 사자처럼 14기</dd>
               </div>
 
               <div>
                 <dt>관심 분야</dt>
-                <dd>웹 개발 / 웹 보안 / 취약점 분석</dd>
+                <dd data-profile-value="interest">웹 개발 / 웹 보안 / 취약점 분석</dd>
               </div>
             </dl>
+
+            <button id="toggleProfileEditor" class="about-edit-btn" type="button">
+              프로필 수정
+            </button>
+
+            <div id="profileEditor" class="about-editor-panel profile-editor">
+              <input type="text" data-profile-input="name" placeholder="이름" />
+              <input type="text" data-profile-input="birth" placeholder="생년월일" />
+              <input type="text" data-profile-input="school" placeholder="학교/전공" />
+              <input type="text" data-profile-input="club" placeholder="동아리 활동" />
+              <input type="text" data-profile-input="interest" placeholder="관심 분야" />
+              <input type="text" data-profile-input="image" placeholder="프로필 이미지 경로 예: img/about.me.jpg" />
+              <button id="resetProfile" class="about-sub-btn" type="button">기본값으로</button>
+            </div>
           </div>
         </section>
 
@@ -103,113 +119,70 @@
             </blockquote>
           </article>
 
-          <article class="about-card">
+          <article class="about-card skill-card-editable">
             <h2>기술 스택</h2>
 
-            <ul class="about-list skill-list">
-              <li class="skill-item">
-                <div class="skill-header">
-                  <span>HTML / CSS</span>
-                  <span>40%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--width: 40%"></div>
-                </div>
-              </li>
+            <ul class="about-list skill-list" id="skillList"></ul>
 
-              <li class="skill-item">
-                <div class="skill-header">
-                  <span>JavaScript</span>
-                  <span>10%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--width: 10%"></div>
-                </div>
-              </li>
+            <button id="toggleSkillEditor" class="about-edit-btn" type="button">
+              기술 스택 수정
+            </button>
 
-              <li class="skill-item">
-                <div class="skill-header">
-                  <span>Python</span>
-                  <span>60%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--width: 60%"></div>
-                </div>
-              </li>
-
-              <li class="skill-item">
-                <div class="skill-header">
-                  <span>Linux</span>
-                  <span>40%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--width: 40%"></div>
-                </div>
-              </li>
-
-              <li class="skill-item">
-                <div class="skill-header">
-                  <span>Node.js</span>
-                  <span>15%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--width: 15%"></div>
-                </div>
-              </li>
-
-              <li class="skill-item">
-                <div class="skill-header">
-                  <span>SQL</span>
-                  <span>30%</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="--width: 30%"></div>
-                </div>
-              </li>
-            </ul>
+            <div id="skillEditor" class="about-editor-panel skill-editor"></div>
           </article>
         </div>
 
         <div class="about-skill">
-          <h2>보유중인 자격증</h2>
+          <div class="certificate-top">
+            <h2>보유중인 자격증</h2>
 
-          <div class="skill-box">
+            <div class="certificate-editor">
+              <input type="text" id="certificateInput" placeholder="자격증 이름 입력" />
+              <button id="addCertificate" class="about-sub-btn" type="button">추가</button>
+            </div>
+          </div>
+
+          <div class="skill-box" id="certificateList">
             <span>네트워크 관리사 2급</span>
             <span>SQLD</span>
           </div>
         </div>
 
         <div class="about-study">
-          <h2>올해 웹 공부 계획</h2>
+          <h2>학습 일정표</h2>
+          <p class="calendar-guide">
+            날짜를 선택하고 학습 일정이나 프로젝트 계획을 기록할 수 있습니다.
+          </p>
 
-          <div class="table-wrapper">
-            <table class="about-table">
-              <thead>
-                <tr>
-                  <th>구분</th>
-                  <th>내용</th>
-                </tr>
-              </thead>
+          <div class="calendar-wrap">
+            <div class="calendar-panel">
+              <div class="calendar-header">
+                <button id="prevMonth" type="button">‹</button>
+                <strong id="calendarTitle">2026년 6월</strong>
+                <button id="nextMonth" type="button">›</button>
+              </div>
 
-              <tbody>
-                <tr>
-                  <td>1분기</td>
-                  <td>HTML 구조, CSS 스타일링 학습</td>
-                </tr>
-                <tr>
-                  <td>2분기</td>
-                  <td>JavaScript 기초 학습 및 간단한 동적 기능 구현</td>
-                </tr>
-                <tr>
-                  <td>3분기</td>
-                  <td>Node.js 기반 웹 서비스 제작 및 백엔드 기초 학습</td>
-                </tr>
-                <tr>
-                  <td>4분기</td>
-                  <td>웹 보안 기초 및 취약점 분석 학습</td>
-                </tr>
-              </tbody>
-            </table>
+              <div class="calendar-weekdays">
+                <span>일</span>
+                <span>월</span>
+                <span>화</span>
+                <span>수</span>
+                <span>목</span>
+                <span>금</span>
+                <span>토</span>
+              </div>
+
+              <div class="calendar-grid" id="calendarGrid"></div>
+            </div>
+
+            <aside class="schedule-panel">
+              <h3 id="selectedDateTitle">선택한 날짜</h3>
+              <div class="schedule-input">
+                <input type="text" id="scheduleInput" placeholder="일정 입력" />
+                <button id="addSchedule" class="about-sub-btn" type="button">추가</button>
+              </div>
+              <ul id="scheduleList" class="schedule-list"></ul>
+            </aside>
           </div>
         </div>
       </div>
@@ -223,6 +196,8 @@
           <a href="about.html">About</a>
           <a href="project.html">Project</a>
           <a href="team.html">Team</a>
+          <a href="recommend.html">Recommend</a>
+          <a href="study.html">Study</a>
           <a href="contact.html">Contact</a>
         </div>
 
@@ -233,5 +208,7 @@
         <p class="footer-copy">© 2026 Bowon Portfolio. All rights reserved.</p>
       </div>
     </footer>
+    <script src="theme.js"></script>
+    <script src="about.js"></script>
   </body>
 </html>
