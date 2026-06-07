@@ -91,14 +91,14 @@ header {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: rgba(123, 97, 255, 0.6);
+  background-color: rgba(59, 130, 246, 0.7);
   border-radius: 2px;
   transition: width 0.3s ease;
 }
 
 .menu a:hover,
 .menu a.active {
-  color: #7b61ff;
+  color: #2563eb;
 }
 
 .menu a:hover::after,
@@ -425,10 +425,14 @@ header {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 8px;
-  background: #7b61ff;
+  background: #2563eb;
   color: white;
   text-decoration: none;
   font-weight: bold;
+}
+
+.link-card a:hover {
+  background: #1d4ed8;
 }
 
 .link-icon {
@@ -1522,7 +1526,7 @@ header {
 
 .recent-table a,
 .recent-toggle-btn {
-  color: #7b61ff;
+  color: #2563eb;
   text-decoration: none;
   font-weight: 700;
 }
@@ -1599,7 +1603,7 @@ header {
 .recent-detail-btn {
   border: none;
   border-radius: 10px;
-  background: #7b61ff;
+  background: #2563eb;
   color: white;
   padding: 11px 14px;
   font-size: 15px;
@@ -1608,7 +1612,7 @@ header {
 }
 
 .recent-detail-btn:hover {
-  background: #684de8;
+  background: #1d4ed8;
 }
 
 .recent-more-area {
@@ -1622,10 +1626,10 @@ header {
   align-items: center;
   justify-content: center;
   min-width: 140px;
-  border: 1px solid #7b61ff;
+  border: 1px solid #2563eb;
   border-radius: 14px;
   background: #fff;
-  color: #6d55e6;
+  color: #2563eb;
   padding: 12px 22px;
   font-size: 16px;
   font-weight: 800;
@@ -1633,7 +1637,7 @@ header {
 }
 
 .recent-more-btn:hover {
-  background: #f3efff;
+  background: #eff6ff;
 }
 
 .status {
@@ -2318,7 +2322,7 @@ header {
   top: 0;
   width: 6px;
   height: 100%;
-  background: #7b61ff;
+  background: #2563eb;
   border-radius: 999px;
 }
 
@@ -3313,8 +3317,8 @@ header {
 
 .option-btn:hover,
 .option-btn.active {
-  background: #7b61ff;
-  border-color: #7b61ff;
+  background: #2563eb;
+  border-color: #2563eb;
   color: white;
 }
 
@@ -3395,8 +3399,8 @@ header {
   display: inline-block;
   padding: 7px 13px;
   border-radius: 999px;
-  background: #f3efff;
-  color: #7b61ff;
+  background: #eff6ff;
+  color: #2563eb;
   font-size: 13px;
   font-weight: 900;
 }
