@@ -1,6 +1,6 @@
 const statsDefaults = {
   personalProjects: '5회',
-  teamProjects: '1회',
+  teamProjects: '2회',
   certificates: '2개',
   clubActivity: '멋사',
 }
@@ -20,65 +20,60 @@ let stats = loadStats()
 let openedRecentIndex = null
 let recentVisibleCount = 4
 
-const defaultTeamRecentProject = {
-  required: true,
-  label: 'SECURITY GUIDE',
-  source: '웹프로그래밍 팀플',
-  title: '주요 사이버 보안 위협과 예방법 안내 웹사이트',
-  desc:
-    '일상생활에서 접할 수 있는 보안 위협을 소개하고, 사용자가 쉽게 확인할 수 있는 예방법을 정리한 보안 정보 안내 웹사이트입니다.',
-  image: 'img/teammain.png',
-  tags: ['HTML', 'CSS', 'JavaScript'],
-  deploy: 'https://project-security-guide.vercel.app/',
-  github: 'https://github.com/Solalise',
-  goal:
-    '사용자가 생활 속 사이버 보안 위협을 쉽게 이해하고, 피싱이나 개인정보 유출 같은 문제를 예방할 수 있도록 정보를 전달하는 것이 목표입니다.',
-  content:
-    '메인, 보안 이슈, OWASP Top 10, 보안 수칙, 팀 소개 페이지로 구성하여 정보 전달과 가독성을 높였습니다.',
-  direction:
-    '카드형 레이아웃, 이미지 요소, 반응형 화면을 활용해 HTML과 CSS 중심의 완성도 있는 사이트를 제작했습니다.',
-  members: [],
-  review:
-    '각자 맡은 페이지를 중심으로 제작하고, 이후 공통 디자인 기준을 맞추며 하나의 사이트로 통합했습니다.',
-  gallery: ['img/teammain.png', 'img/rule.png', 'img/issue.png', 'img/owasp.png'],
-}
-
-const fallbackRecentActivities = [
+const defaultTeamRecentProjects = [
   {
-    type: '개인 프로젝트',
-    title: 'AI 공부 관리 웹서비스',
-    status: '설계중',
-    statusClass: 'planned',
-    href: 'project.html',
-    linkText: 'Project 보기',
-    desc: '프로젝트 페이지에서 새 프로젝트를 추가하면 이 영역이 자동으로 업데이트됩니다.',
+    required: true,
+    id: 'mid-security-guide',
+    label: 'MIDTERM SECURITY GUIDE',
+    source: '웹프로그래밍 중간 팀플',
+    title: 'Security Guide 보안 안내 웹사이트',
+    desc:
+      '피싱, 랜섬웨어, 개인정보 유출 등 일상생활에서 접할 수 있는 보안 위협과 예방법을 소개한 중간 팀 프로젝트입니다.',
+    image: 'img/teammain.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    deploy: 'https://project-security-guide.vercel.app/',
+    github: 'https://github.com/Solalise',
+    goal:
+      '사용자가 생활 속 사이버 보안 위협을 쉽게 이해하고, 피싱이나 개인정보 유출 같은 문제를 예방할 수 있도록 정보를 전달하는 것이 목표입니다.',
+    content:
+      '메인 홈, 보안 이슈, OWASP Top 10, 보안 수칙, 팀 소개 페이지로 구성하여 보안 정보를 카드와 리스트 중심으로 정리했습니다.',
+    direction:
+      'HTML과 CSS를 중심으로 페이지 구조, 카드형 레이아웃, 반응형 화면, 기본 페이지 연결을 구현했습니다.',
+    members: [],
+    review:
+      '중간 프로젝트에서는 보안 정보를 읽고 이해할 수 있는 안내형 웹사이트를 제작했습니다.',
+    gallery: ['img/teammain.png', 'img/rule.png', 'img/issue.png', 'img/owasp.png'],
   },
   {
-    type: '개인 프로젝트',
-    title: 'HTML / 웹 취약점 분석 플랫폼',
-    status: '진행중',
-    statusClass: 'progress',
-    href: 'project.html',
-    linkText: 'Project 보기',
-    desc: '프로젝트 페이지와 연결되는 최근 활동 예시입니다.',
-  },
-  {
-    type: '팀 프로젝트',
-    title: '팀 프로젝트 활동 내용 정리',
-    status: '완료',
-    statusClass: 'done',
-    href: 'team.html',
-    linkText: 'Team 보기',
-    desc: '팀 활동 페이지로 이동합니다.',
-  },
-  {
-    type: '개인 프로젝트',
-    title: '개인 포트폴리오 사이트 제작',
-    status: '완료',
-    statusClass: 'done',
-    href: 'project.html',
-    linkText: 'Project 보기',
-    desc: '개인 포트폴리오 사이트 제작 활동입니다.',
+    required: true,
+    id: 'final-security-guide',
+    label: 'FINAL SECURITY GUIDE',
+    source: '웹프로그래밍 기말 팀플',
+    title: 'Security Guide 보안 학습 플랫폼',
+    desc:
+      '중간 프로젝트의 보안 안내 웹사이트를 확장하여 보안 이슈 뉴스, OWASP 취약점 실습, 실생활 보안 위험 진단, 보안 퀴즈와 보안 습관 체크리스트를 추가한 기말 팀 프로젝트입니다.',
+    image: 'img/security-final-practice.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    deploy: 'https://web-programming-team-project-alpha.vercel.app/index.html',
+    github: 'https://github.com/Solalise',
+    goal:
+      '중간 프로젝트의 안내형 사이트를 사용자가 직접 테스트하고 결과를 확인할 수 있는 인터랙티브 보안 학습 플랫폼으로 업그레이드하는 것이 목표입니다.',
+    content:
+      '보안 뉴스 자동 반영, OWASP 취약점 실습, 비밀번호·피싱 메일·URL 위험 진단, 보안 퀴즈, 개인 보안 습관 체크리스트, 팀 소개와 문의 기능을 추가했습니다.',
+    direction:
+      'JavaScript를 활용해 입력값 분석, 버튼 클릭 이벤트, 체크리스트 점수 계산, 뉴스/영상 필터링, 상세 정보 표시 기능을 구현했습니다.',
+    members: [],
+    review:
+      '기말 프로젝트에서는 JavaScript로 기능을 확장해 사용자가 직접 반응을 확인할 수 있는 보안 학습 플랫폼으로 발전시켰습니다.',
+    gallery: [
+      'img/security-final-practice.png',
+      'img/security-final-news.png',
+      'img/security-final-issues.png',
+      'img/security-final-risk.png',
+      'img/security-final-diagnosis.png',
+      'img/security-final-quiz.png',
+      'img/security-final-checklist.png',
+    ],
   },
 ]
 
@@ -125,7 +120,7 @@ function loadTeamProjects() {
   try {
     const savedProjects = JSON.parse(localStorage.getItem(teamProjectsStorageKey)) || []
     const baseProjects =
-      localStorage.getItem(hideDefaultTeamProjectKey) === 'true' ? [] : [defaultTeamRecentProject]
+      localStorage.getItem(hideDefaultTeamProjectKey) === 'true' ? [] : defaultTeamRecentProjects
 
     return baseProjects.concat(savedProjects).map(function (project) {
       return {
@@ -136,7 +131,7 @@ function loadTeamProjects() {
   } catch (error) {
     return localStorage.getItem(hideDefaultTeamProjectKey) === 'true'
       ? []
-      : [defaultTeamRecentProject]
+      : defaultTeamRecentProjects
   }
 }
 
@@ -155,10 +150,6 @@ function getStatusClass(status) {
 function makeRecentActivities() {
   const projects = loadProjects()
   const teamProjects = loadTeamProjects()
-
-  if (projects.length === 0 && teamProjects.length === 0) {
-    return fallbackRecentActivities
-  }
 
   const projectActivities =
     projects.length > 0
@@ -183,13 +174,7 @@ function makeRecentActivities() {
               linkText: 'Project 보기',
             }
           })
-      : fallbackRecentActivities
-          .filter(function (activity) {
-            return activity.type !== '팀 프로젝트'
-          })
-          .map(function (activity, index) {
-            return { ...activity, recentOrder: -index - 1 }
-          })
+      : []
 
   const teamActivities = teamProjects
     .map(function (project, index) {
