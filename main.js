@@ -20,6 +20,25 @@ let stats = loadStats()
 let openedRecentIndex = null
 let recentVisibleCount = 4
 
+const defaultProjects = [
+  {
+    title: '실습 웹사이트 제작',
+    category: 'Web',
+    status: '완료',
+    desc: 'HTML, CSS, JavaScript를 사용해서 기본적인 웹 기능을 실습한 프로젝트입니다.',
+    image: 'img/hcjmain.png',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    title: '포트폴리오 소개 웹사이트 제작',
+    category: 'Web',
+    status: '완료',
+    desc: '저의 포트폴리오를 소개하기 위해 만든 웹사이트입니다.',
+    image: 'img/portfolio site main.png',
+    tags: ['HTML', 'CSS'],
+  },
+]
+
 const defaultTeamRecentProjects = [
   {
     required: true,
@@ -110,9 +129,9 @@ function renderStats() {
 
 function loadProjects() {
   try {
-    return JSON.parse(localStorage.getItem(projectsStorageKey)) || []
+    return JSON.parse(localStorage.getItem(projectsStorageKey)) || defaultProjects
   } catch (error) {
-    return []
+    return defaultProjects
   }
 }
 
