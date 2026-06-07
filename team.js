@@ -62,7 +62,7 @@ const defaultTeamProjects = [
     title: 'Security Guide 보안 학습 플랫폼',
     desc:
       '중간 프로젝트의 보안 안내 웹사이트를 확장하여 보안 이슈 뉴스, OWASP 취약점 실습, 실생활 보안 위험 진단, 보안 퀴즈와 보안 습관 체크리스트를 추가한 기말 팀 프로젝트입니다.',
-    image: 'img/teammain.png',
+    image: 'img/security-final-practice.png',
     tags: ['HTML', 'CSS', 'JavaScript'],
     deploy: 'https://web-programming-team-project-alpha.vercel.app/index.html',
     github: 'https://github.com/Solalise',

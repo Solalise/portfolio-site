@@ -6,7 +6,7 @@ function applyTheme(theme) {
 }
 
 function getSavedTheme() {
-  return localStorage.getItem(themeStorageKey) || 'light';
+  return 'light';
 }
 
 function updateThemeButton(button) {

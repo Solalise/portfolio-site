@@ -267,11 +267,6 @@ function renderRecentMoreButton(totalCount) {
     return
   }
 
-  if (recentVisibleCount >= totalCount) {
-    recentMoreBtn.style.display = 'none'
-    return
-  }
-
   recentMoreBtn.style.display = 'inline-flex'
   recentMoreBtn.innerText = '더보기'
 }
